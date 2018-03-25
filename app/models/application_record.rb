@@ -1,4 +1,3 @@
-class Message < ApplicationRecord
-  validates :content, presence: true, length: { maximum: 255 }
-  validates :status, presence: true, length: { maximum: 255 }
+class ApplicationRecord < ActiveRecord::Base
+  self.abstract_class = true
 end
